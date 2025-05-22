@@ -1,0 +1,119 @@
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f8f5f0, #f2b880);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Container for intro content */
+.intro-container {
+    text-align: center;
+    animation: slideUp 1s ease-out;
+    background-color: #ffffff00;
+    padding: 40px 60px;
+    border-radius: 20px;
+}
+
+/* Logo */
+.intro-logo img {
+    width: 120px;
+    animation: bounceIn 1.2s ease;
+}
+
+/* Title and subtitle */
+.intro-title {
+    font-size: 2.5em;
+    margin: 20px 0 10px;
+    color: #ffffff;
+}
+
+.intro-subtitle {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.intro-button {
+    text-decoration: none;
+    background-color: #ec7115;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.intro-button:hover {
+    background-color: #cf5c0a;
+    transform: scale(1.05);
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    60% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); }
+}
+.bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    background: url("image/background-2.gif") no-repeat center center;
+    background-size: cover;
+    pointer-events: none; /* 👈 important: prevents it from blocking clicks */
+}
+
+
+.intro-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.intro-button.alt {
+    background-color: #f8f5f0;
+    color: #4e342e;
+}
+
+.intro-button.alt:hover {
+    background-color: #e0d7cc;
+    color: #000;
+}
+
+
+.about-section {
+    display: none;
+    background-color: #ffffff;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
